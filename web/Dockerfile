@@ -17,13 +17,14 @@ USER admin
 # apache install
 RUN sudo yum install -y httpd
 RUN sudo systemctl enable httpd.service
-RUN sudo mkdir -p /var/www/html/dotnet
+RUN sudo chown admin:admin /var/www/html/
 RUN sudo chmod -R 2775 /var/www/html/
-RUN sudo gpasswd -a admin apache
+RUN sudo gpasswd -a apache admin
+RUN sudo mkdir -p /var/www/html/dotnet
 
 # install dotnet
+WORKDIR /home/admin
 RUN sudo yum -y install libunwind libicu
-WORKDIR /tmp
 RUN curl -sSL -o dotnet.tar.gz https://aka.ms/dotnet-sdk-2.0.0-linux-x64
 RUN mkdir -p ~/dotnet && tar zxf dotnet.tar.gz -C ~/dotnet
 RUN sudo ln -s ~/dotnet/dotnet /usr/local/bin
