@@ -22,5 +22,10 @@ RUN mkdir -p /opt/dotnet/sdk2.0.0
 RUN tar zxf dotnet.tar.gz -C /opt/dotnet/sdk2.0.0 
 RUN ln -s /opt/dotnet/sdk2.0.0/dotnet /usr/local/bin
 
+
+COPY ./dotnet.service /etc/systemd/system/dotnet.service
+RUN systemctl enable dotnet.service
+
+
 # exec
 CMD ["/sbin/init"]
