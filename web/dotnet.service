@@ -8,7 +8,9 @@ Restart=always
 RestartSec=10
 SyslogIdentifier=dotnet-web-application
 User=root
-Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_ENVIRONMENT=Development
+Environment=ASPNETCORE_URLS=http://*:5000
+Environment=DOTNET_USE_POLLING_FILE_WATCHER=1
 
 [Install]
 WantedBy=multi-user.target
