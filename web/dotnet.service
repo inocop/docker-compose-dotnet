@@ -8,6 +8,7 @@ Restart=always
 RestartSec=10
 SyslogIdentifier=dotnet-web-application
 User=root
+Environment=ASPNETCORE_URLS=http://127.0.0.1:5000
 Environment=ASPNETCORE_ENVIRONMENT=Development
 Environment=DOTNET_USE_POLLING_FILE_WATCHER=1
 
