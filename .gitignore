@@ -2,4 +2,4 @@
 /.project
 /.buildpath
 /.settings/
-src/hello_dotnet
+src/hello_dotnet/*

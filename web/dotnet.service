@@ -2,7 +2,7 @@
 Description=dotnet web application
 
 [Service]
-ExecStart=/usr/bin/dotnet run
+ExecStart=/usr/bin/dotnet /opt/dotnet/src/hello_dotnet/bin/Debug/netcoreapp2.0/hello_dotnet.dll
 WorkingDirectory=/opt/dotnet/src/hello_dotnet
 Restart=always
 RestartSec=10

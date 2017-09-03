@@ -1,6 +1,8 @@
 ## create asp.net core project (in docker)
 ```
-$ dotnet new mvc -o /opt/dotnet/src/hello_dotnet
+$ cd /opt/dotnet/src/hello_dotnet
+$ dotnet new mvc
+$ dotnet build
 $ systemctl restart dotnet.service
 ```
 
