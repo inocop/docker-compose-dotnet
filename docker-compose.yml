@@ -4,6 +4,7 @@ services:
     build: ./web
     ports:
       - "8080:80"
+      - "4444:443"
     volumes:
       - ./src:/opt/dotnet/src
     privileged: true

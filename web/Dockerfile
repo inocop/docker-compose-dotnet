@@ -9,7 +9,7 @@ RUN echo "include_only=.jp" >>  /etc/yum/pluginconf.d/fastestmirror.conf
 
 
 # apache install
-RUN yum install -y httpd
+RUN yum install -y httpd mod_ssl mod_rewrite mod_proxy
 RUN systemctl enable httpd.service
 COPY ./dotnet.conf /etc/httpd/conf.d/dotnet.conf
 
