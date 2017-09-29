@@ -24,6 +24,5 @@ RUN yum install -y dotnet-sdk-2.0.0
 COPY ./dotnet.service /etc/systemd/system/dotnet.service
 RUN systemctl enable dotnet.service
 
-
 # exec
 CMD ["/sbin/init"]
