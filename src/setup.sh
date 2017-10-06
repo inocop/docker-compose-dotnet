@@ -16,8 +16,7 @@ dotnet add package Pomelo.EntityFrameworkCore.MySql --version 2.0.0
 sed -i -e "s/options.UseSqlite/options.UseMySql/g" ./Startup.cs
 
 # build & start
-dotnet restore
-dotnet build -o /opt/dotnet/bin/
+dotnet publish --runtime centos.7-x64 --output bin/publish
 systemctl restart dotnet.service
 
 # db migrate

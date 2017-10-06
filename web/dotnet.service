@@ -2,8 +2,8 @@
 Description=dotnet web application
 
 [Service]
-ExecStart=/usr/bin/dotnet /opt/dotnet/bin/hello_dotnet.dll
-WorkingDirectory=/opt/dotnet/src/hello_dotnet
+WorkingDirectory=/opt/dotnet/src/hello_dotnet  # /opt/dotnet/src/hello_dotnet/bin/publish
+ExecStart=/usr/bin/dotnet /opt/dotnet/src/hello_dotnet/bin/publish/hello_dotnet.dll
 Restart=always
 RestartSec=10
 SyslogIdentifier=dotnet-web-application

@@ -1,2 +1,3 @@
 src/hello_dotnet/*
 !src/hello_dotnet/.gitkeep
+!src/hello_dotnet/.vscode
