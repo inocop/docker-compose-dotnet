@@ -36,5 +36,10 @@ RUN curl -sL https://rpm.nodesource.com/setup_8.x | bash -
 RUN yum install -y nodejs gcc-c++ make git
 RUN npm install -g bower
 
+
+# insall debugger
+curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l /opt/dotnet/vsdbg
+
+
 # exec
 CMD ["/sbin/init"]
