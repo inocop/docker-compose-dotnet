@@ -38,7 +38,7 @@ RUN npm install -g bower
 
 
 # insall debugger
-curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l /opt/dotnet/vsdbg
+RUN curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l /opt/dotnet/vsdbg
 
 
 # exec
