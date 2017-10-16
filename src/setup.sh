@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # create project
+mkdir -p /opt/dotnet/src/hello_dotnet
 cd /opt/dotnet/src/hello_dotnet
 dotnet new mvc --auth Individual --framework netcoreapp2.0
 
