@@ -1,4 +1,4 @@
-## Environment
+## Start 
 ```
 $ git clone https://github.com/inocop/docker-dotnet.git
 $ cd docker-dotnet
@@ -9,11 +9,23 @@ $ docker exec -it docker-dotnet_web_1 bash
 
 ## Rebuild
 ```
-$ cd docker-dotnet
-$ ./dotnet_rebuild.sh
+$ cd docker-dotnet/src
+$ ./rebuild_from_host.sh
 ```
+or  
 
-## Show
+Visual Studio Code > task.json > publish
+
+## Test
+```
+$ cd docker-dotnet/src/hello_dotnet.test
+$ dotnet test 
+```
+or  
+
+Visual Studio Code > task.json -> xUnit
+
+## Browse
 
 ### dotnet application
 http://localhost:8080
