@@ -1,5 +1,6 @@
 hello_dotnet*
-**/*.suo
 
-!**/.gitkeep
-!**/.vscode
+**/*.suo
+**/bin/*
+**/obj/*
+**/wwwroot/lib/*
