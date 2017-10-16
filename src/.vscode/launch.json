@@ -10,14 +10,14 @@
            "request": "attach",
            "processId": "${command:pickRemoteProcess}",
            "pipeTransport": {
-               "pipeCwd": "${workspaceRoot}",
+               "pipeCwd": "${workspaceRoot}/hello_dotnet",
                "pipeProgram": "docker",
                "pipeArgs": ["exec", "-i", "dockerdotnet_web_1"],
                "debuggerPath": "/opt/dotnet/vsdbg/vsdbg",
                "quoteArgs": false
            },
            "sourceFileMap": {
-               "/opt/dotnet/src/hello_dotnet": "${workspaceRoot}"
+               "/opt/dotnet/src/hello_dotnet": "${workspaceRoot}/hello_dotnet"
            }
        }
     ]

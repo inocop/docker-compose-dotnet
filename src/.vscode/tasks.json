@@ -8,6 +8,22 @@
             "command": "dotnet publish --runtime centos.7-x64 --output bin/publish && docker exec dockerdotnet_web_1 systemctl restart dotnet.service",
             "type": "shell",
             "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/hello_dotnet"
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "taskName": "xUnit",
+            "command": "dotnet test",
+            "type": "shell",
+            "group": "test",
+            "options": {
+                "cwd": "${workspaceFolder}/hello_dotnet.test"
+            },
             "presentation": {
                 "reveal": "silent"
             },
