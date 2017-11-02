@@ -41,5 +41,11 @@ RUN npm install -g bower
 RUN curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l /opt/dotnet/vsdbg
 
 
+RUN yum -y install openssh-server
+RUN sed -ri 's/^#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN echo 'root:password' | chpasswd
+RUN ssh-keygen -t rsa -N "" -f /etc/ssh/ssh_host_rsa_key
+RUN systemctl enable sshd.service
+
 # exec
 CMD ["/sbin/init"]
