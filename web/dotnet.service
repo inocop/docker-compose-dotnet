@@ -2,13 +2,13 @@
 Description=dotnet web application
 
 [Service]
-WorkingDirectory=/opt/dotnet/src/hello_dotnet  
-#WorkingDirectory=/opt/dotnet/src/hello_dotnet/bin/publish
+WorkingDirectory=/opt/dotnet/src/hello_dotnet
+# WorkingDirectory=/opt/dotnet/src/hello_dotnet/bin/publish
 ExecStart=/usr/bin/dotnet /opt/dotnet/src/hello_dotnet/bin/publish/hello_dotnet.dll
 Restart=always
 RestartSec=10
 SyslogIdentifier=dotnet-web-application
-User=root
+User=dotnetdev
 Environment=ASPNETCORE_URLS=http://127.0.0.1:5000
 Environment=ASPNETCORE_ENVIRONMENT=Development
 Environment=DOTNET_USE_POLLING_FILE_WATCHER=1
