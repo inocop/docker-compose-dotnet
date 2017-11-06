@@ -51,7 +51,6 @@ RUN npm install -g bower
 
 # enable sshd for debugg
 RUN yum -y install openssh-server
-#RUN ssh-keygen -t rsa -N "" -f /etc/ssh/ssh_host_rsa_key
 RUN systemctl enable sshd.service
 
 
