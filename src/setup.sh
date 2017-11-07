@@ -23,7 +23,7 @@ dotnet add package dotnet-xunit --version 2.3.0
 
 
 #####  Build & Run  #####
-dotnet publish --runtime centos.7-x64 --output bin/publish
+dotnet publish --configuration Debug --output bin/publish
 systemctl restart dotnet.service
 
 

@@ -1,6 +1,9 @@
 hello_dotnet*
 
+**/*.vs
 **/*.suo
+**/*.csproj.user
+**/*.pubxml.user
 **/bin/*
 **/obj/*
 **/wwwroot/lib/*
